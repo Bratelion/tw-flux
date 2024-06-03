@@ -1,0 +1,44 @@
+{
+  "name": "tw-flux",
+  "version": "1.0.0",
+  "description": "Collection of ready-made tailwind components",
+  "main": "dist/index.js",
+  "files": [
+    "src/components"
+  ],
+  "repository": "https://github.com/Bratelion/tw-flux.git",
+  "author": "Ante Curkov <ante.curkov@deptagency.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/preview/index.html",
+    "build": "parcel build src/preview/index.html",
+    "build:lib": "tsc",
+    "prepack": "clean-package",
+    "new:pack": "yarn build:lib && yarn pack && clean-package restore"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.12.0",
+    "@parcel/validator-typescript": "^2.12.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "clean-package": "^2.2.0",
+    "parcel": "^2.0.0",
+    "parcel-resolver-tspaths": "^0.0.9",
+    "process": "^0.11.10",
+    "typescript": "^4.0.0"
+  },
+  "clean-package": {
+    "remove": [
+      "scripts",
+      "devDependencies",
+      "clean-package"
+    ]
+  }
+}

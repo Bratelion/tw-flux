@@ -1,0 +1,15 @@
+# Ignore the preview directory
+preview/
+
+# Ignore other unnecessary files
+*.log
+*.backup
+node_modules/
+*.config.js
+*.config.json
+*.config.cjs
+.DS_Store
+.env
+coverage/
+public/
+yarn.lock
