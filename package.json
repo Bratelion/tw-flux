@@ -4,7 +4,8 @@
   "description": "Collection of ready-made tailwind components",
   "main": "dist/index.js",
   "files": [
-    "src/components"
+    "src/components",
+    "src/icons"
   ],
   "repository": "https://github.com/Bratelion/tw-flux.git",
   "author": "Ante Curkov <ante.curkov@deptagency.com>",
@@ -17,13 +18,16 @@
     "new:pack": "yarn build:lib && yarn pack && clean-package restore"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.0.0",
+    "clsx": "^2.1.1",
     "postcss": "^8.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwindcss": "^3.0.0"
   },
   "devDependencies": {
+    "@parcel/transformer-svg-react": "^2.12.0",
     "@parcel/transformer-typescript-tsc": "^2.12.0",
     "@parcel/validator-typescript": "^2.12.0",
     "@types/react": "^18.0.0",
