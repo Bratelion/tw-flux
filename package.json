@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "files": [
     "src/components",
-    "src/icons"
+    "src/icons",
+    "src/hooks"
   ],
   "repository": "https://github.com/Bratelion/tw-flux.git",
   "author": "Ante Curkov <ante.curkov@deptagency.com>",
@@ -21,6 +22,7 @@
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.0.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
     "postcss": "^8.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
