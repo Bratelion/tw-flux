@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 import { ClassNameWithChildren } from "components/types";
 import CloseIcon from "jsx:icons/close.svg";
-import { useOutsideClick } from "src/hooks";
+import { useDisclosure, useOutsideClick } from "hooks";
 
 /**
  * Props for the Accordion component.
@@ -78,32 +78,28 @@ const Accordion: React.FC<AccordionProps> & {
   className,
   autoClose = false,
 }: AccordionProps): JSX.Element => {
-  const [isVisible, setIsVisible] = useState(false);
+  const {isOpen, onClose, onToggle} = useDisclosure(false);
   const accordionRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(accordionRef, () => {
-    if (isVisible && autoClose) {
-      setTimeout(() => setIsVisible(false), 100);
+    if (isOpen && autoClose) {
+      setTimeout(() => onClose(), 100);
     }
   });
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
 
   const enhancedChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
       if (child.type === AccordionTitle) {
         return cloneElement(child, {
-          onToggle: toggleVisibility,
-          isOpen: isVisible,
+          onToggle: onToggle,
+          isOpen: isOpen,
         } as AccordionTitleProps);
       }
       if (child.type === AccordionBody) {
         return (
           <motion.div
             initial={{ height: 0 }}
-            animate={{ height: isVisible ? "auto" : 0 }}
+            animate={{ height: isOpen ? "auto" : 0 }}
             transition={{ duration: 0.3 }}
             style={{ overflow: "hidden" }}
           >
