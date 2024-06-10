@@ -1,7 +1,7 @@
 import "./styles.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Accordion, List } from "..";
+import { Accordion, Link, List } from "..";
 
 const App: React.FC = () => (
   <div className="p-4">
@@ -32,9 +32,9 @@ const App: React.FC = () => (
             layout and content presentation accordingly.
           </List.Item>
         </List>
-        <a className="mt-4" href="https://www.wix.com/blog/website-layouts">
+        <Link className="mt-4" href="https://www.wix.com/blog/website-layouts">
           Learn more about website layouts
-        </a>
+        </Link>
       </Accordion.Body>
     </Accordion>
     <Accordion>
@@ -60,12 +60,12 @@ const App: React.FC = () => (
           <List.Item>
             <strong>Adaptive page design:</strong> Ensures a seamless user
             experience across different devices and screen sizes. It adjusts the
-            layout and content presentation accordingly.
+            layout and content <Link href='/this' variant="inline">presentation accordingly</Link>.
           </List.Item>
         </List>
-        <a className="mt-4" href="https://www.wix.com/blog/website-layouts">
+        <Link className="mt-4" variant="inline" href="https://www.wix.com/blog/website-layouts">
           Learn more about website layouts
-        </a>
+        </Link>
       </Accordion.Body>
     </Accordion>
   </div>
