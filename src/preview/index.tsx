@@ -42,6 +42,74 @@ const App: React.FC = () => (
             </Link>
           </Accordion.Body>
         </Accordion>
+        <Accordion autoClose>
+          <Accordion.Title>
+            <h2>What are the different types of web design?</h2>
+          </Accordion.Title>
+          <Accordion.Body>
+            <p>
+              There are various types of web designs to match different types of
+              websites. Here are a few examples:
+            </p>
+            <List variant="unordered">
+              <List.Item>
+                <strong>Single page design:</strong> Ideal for small projects or
+                simple content presentation. It's concise and delivers
+                information on a single scrollable page.
+              </List.Item>
+              <List.Item>
+                <strong>Dynamic page design:</strong> Suited for scaling
+                websites with changing content. It allows for easy updates and
+                expansion as your content grows.
+              </List.Item>
+              <List.Item>
+                <strong>Adaptive page design:</strong> Ensures a seamless user
+                experience across different devices and screen sizes. It adjusts
+                the layout and content presentation accordingly.
+              </List.Item>
+            </List>
+            <Link
+              className="mt-4"
+              href="https://www.wix.com/blog/website-layouts"
+            >
+              Learn more about website layouts
+            </Link>
+          </Accordion.Body>
+        </Accordion>
+        <Accordion autoClose>
+          <Accordion.Title>
+            <h2>What are the different types of web design?</h2>
+          </Accordion.Title>
+          <Accordion.Body>
+            <p>
+              There are various types of web designs to match different types of
+              websites. Here are a few examples:
+            </p>
+            <List variant="unordered">
+              <List.Item>
+                <strong>Single page design:</strong> Ideal for small projects or
+                simple content presentation. It's concise and delivers
+                information on a single scrollable page.
+              </List.Item>
+              <List.Item>
+                <strong>Dynamic page design:</strong> Suited for scaling
+                websites with changing content. It allows for easy updates and
+                expansion as your content grows.
+              </List.Item>
+              <List.Item>
+                <strong>Adaptive page design:</strong> Ensures a seamless user
+                experience across different devices and screen sizes. It adjusts
+                the layout and content presentation accordingly.
+              </List.Item>
+            </List>
+            <Link
+              className="mt-4"
+              href="https://www.wix.com/blog/website-layouts"
+            >
+              Learn more about website layouts
+            </Link>
+          </Accordion.Body>
+        </Accordion>
       </Accordion.Body>
     </Accordion>
     <Accordion autoClose>
@@ -76,7 +144,9 @@ const App: React.FC = () => (
           <Dropdown.Name>This is a toggle</Dropdown.Name>
           <Dropdown.Item>Item 1 and it is loooooooong</Dropdown.Item>
           <Dropdown.Item>Item 2 is short</Dropdown.Item>
-          <Dropdown.Item>Item 3 is much much much longer than others</Dropdown.Item>
+          <Dropdown.Item>
+            Item 3 is much much much longer than others
+          </Dropdown.Item>
         </Dropdown>
       </Accordion.Body>
     </Accordion>
