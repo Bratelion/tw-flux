@@ -1,10 +1,14 @@
 import "./styles.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Accordion, Dropdown, Link, List } from "..";
+import { Accordion, Blur, Dropdown, Link, List } from "..";
 
 const App: React.FC = () => (
-  <div className="p-4">
+  <Blur
+    className="flex flex-col p-4 text-white bg-black h-screen"
+    blobs={36}
+    blobColors={["yellow", "orange", "red", "green", "blue", "violet"]}
+  >
     <Accordion autoClose>
       <Accordion.Title>Accordion component</Accordion.Title>
       <Accordion.Body>
@@ -150,7 +154,7 @@ const App: React.FC = () => (
         </Dropdown>
       </Accordion.Body>
     </Accordion>
-  </div>
+  </Blur>
 );
 
 const root = createRoot(document.getElementById("app") as HTMLElement);

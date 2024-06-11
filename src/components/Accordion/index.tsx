@@ -40,11 +40,9 @@ interface AccordionBodyProps extends ClassNameWithChildren {}
 
 /**
  * Accordion component that acts as a container for Accordion.Title and Accordion.Body.
- * Throws an error if Accordion.Title or Accordion.Body are missing.
  *
  * @param {AccordionProps} props - The props for the Accordion component.
  * @returns {JSX.Element} The rendered Accordion component.
- * @throws Will throw an error if Accordion.Title or Accordion.Body are not present.
  *
  * @example
  * <Accordion>
