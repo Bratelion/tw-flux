@@ -37,10 +37,14 @@ const Blur: FC<BlurProps> = ({ children, className, blobs = 3, blobClassName, bl
         className
       )}
     >
+      <div className="absolute w-full h-full top-0 left-0 z-0">
     {Array.from({ length: blobs }).map((_, i) => (
       <Blob key={i} className={blobClassName} blobColors={blobColors} />
     ))}
+      </div>
+      <div className="z-[1]">
       {children}
+      </div>
     </div>
   );
 };

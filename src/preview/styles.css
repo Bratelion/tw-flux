@@ -2,3 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .folder {
+    transform: perspective(1000px) rotateY(10deg);
+  }
+  .folder-back {
+    filter: brightness(1.2);
+  }
+  .folder-content {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 300ms;
+  }
+  .folder-front {
+    transform: perspective(1000px) rotateY(10deg) rotateX(-45deg) rotateZ(-1deg);
+    transform-origin: bottom;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(0.8);
+  }
+  .folder:hover .folder-front, .folder-front-open {
+    transform: perspective(1000px) rotateY(10deg) rotateX(-55deg) rotateZ(-1deg);
+    transition: all 0.3s ease-in-out;
+  }
+  .folder:hover .folder-content, .folder-content-open {
+    transform: translateY(-10px) rotateZ(5deg);
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 100ms;
+  }
+}

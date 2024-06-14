@@ -32,22 +32,23 @@ const Blob = ({ className, blobColors }: { className?: string, blobColors?:strin
     if (!parentElement) return;
 
     const { width, height } = parentElement.getBoundingClientRect();
+    const isMobile = width < 768;
+    const bound = isMobile ? 128 : 256;
 
     const animateBlob = () => {
       controls.start({
         x: [
-          random(0, width - 256),
-          random(0, width - 256),
-          random(0, width - 256),
-          random(0, width - 256),
+          random(0, width - bound),
+          random(0, width - bound),
+          random(0, width - bound),
+          random(0, width - bound),
         ],
         y: [
-          random(0, height - 256),
-          random(0, height - 256),
-          random(0, height - 256),
-          random(0, height - 256),
+          random(0, height - bound),
+          random(0, height - bound),
+          random(0, height - bound),
+          random(0, height - bound),
         ],
-        z: [0, random(5, 10), random(0, 5), random(5, 10)],
         transition: {
           duration: random(10, 50),
           repeat: Infinity,
@@ -64,7 +65,7 @@ const Blob = ({ className, blobColors }: { className?: string, blobColors?:strin
     <motion.div
       ref={blobRef}
       className={clsx(
-        "absolute w-64 h-64 bg-black opacity-30 rounded-full filter blur-[42px]",
+        "absolute w-32 h-32 md:w-64 md:h-64 bg-black opacity-30 rounded-full filter blur-[42px]",
         className
       )}
       style={{
