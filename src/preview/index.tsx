@@ -1,7 +1,7 @@
 import "./styles.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Accordion, Blur, Dropdown, Folder, Link, List } from "..";
+import { Accordion, Blur, Detail, Dropdown, Folder, Link, List } from "..";
 
 const App: React.FC = () => (
   <Blur
@@ -180,9 +180,7 @@ const App: React.FC = () => (
             but she was determined to see this adventure through.
           </p>
 
-          <h3 className="font-semibold mb-4">
-            Meeting the Forest Guardian
-          </h3>
+          <h3 className="font-semibold mb-4">Meeting the Forest Guardian</h3>
           <p className="text-base mb-4">
             After hours of walking, Elara came across a clearing where a
             magnificent tree stood, larger and older than any she had ever seen.
@@ -228,7 +226,52 @@ const App: React.FC = () => (
         </Folder>
       </div>
     </div>
-    
+    <Accordion autoClose>
+      <Accordion.Title>Detail component</Accordion.Title>
+      <Accordion.Body className="flex justify-center">
+        <Detail align="left" className="mt-10">
+          <h2 className="text-2xl font-bold">long life</h2>
+          <p>
+            you can use your sofi pod for a week between charges, and it takes
+            about one hour to recharge fully with any usb-c cable
+          </p>
+        </Detail>
+        <img
+          src="https://sofi.health/wp-content/themes/Sofi/assets/images/micro-website-images/black-stick.png"
+          className="h-[500px]"
+        />
+        <div className="flex flex-col">
+          <Detail align="center" className="mt-20">
+            <h2 className="text-2xl font-bold">personal + portable</h2>
+            <p>
+              simple, minimal, pocket-sized, and discrete, with ‘lock’
+              technology to prevent accidental sprays, an easy companion
+              anywhere you go
+            </p>
+          </Detail>
+          <Detail align="center" className="mt-10">
+            <h2 className="text-2xl font-bold">black or white</h2>
+            <p>
+              available in brushed aluminium slate and glossy white. we couldn’t
+              decide on our favourite, so we're leaving the choice to you
+            </p>
+          </Detail>
+        </div>
+
+        <img
+          src="https://sofi.health/wp-content/themes/Sofi/assets/images/micro-website-images/white-stick.png"
+          className="h-[500px]"
+        />
+        <Detail align="right" className="mt-8">
+          <h2 className="text-2xl font-bold">connected</h2>
+          <p>
+            your pod connects via bluetooth to the sofi app on your smartphone,
+            allowing you to make new and unique discoveries with traditional
+            plants
+          </p>
+        </Detail>
+      </Accordion.Body>
+    </Accordion>
   </Blur>
 );
 
